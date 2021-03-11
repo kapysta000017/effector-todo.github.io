@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.tasks {
+  flex: 1;
+  padding: 60px;
+  &__title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+    &__text {
+      font-family: Montserrat, sans-serif;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 39px;
+    }
+    &__edit {
+      cursor: pointer;
+      opacity: 0.2;
+      margin-left: 15px;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    margin: 20px 0px;
+    align-items: center;
+    &__check {
+      display: none;
+    }
+    &__text {
+      flex: 1;
+    }
+    label {
+      display: flex; // label не блок, а так становится блоком чтобы width height отработали
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #e8e8e8;
+      border-radius: 30px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      margin-right: 15px;
+      &:hover {
+        background: #c9d1d3;
+      }
+      img {
+        opacity: 0;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    input:checked + label {
+      // справа сосед
+      background-color: #4dd599;
+      border-color: #4dd599;
+      img {
+        cursor: pointer;
+      }
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.main__title {
+  &__green {
+    color: #42b883;
+  }
+
+  &__blue {
+    color: #64c4ed;
+  }
+
+  &__pink {
+    color: #ffbbcc;
+  }
+
+  &__red {
+    color: #ff6464;
+  }
+
+  &__black {
+    color: #110133;
+  }
+
+  &__purple {
+    color: #c355f5;
+  }
+
+  &__lime {
+    color: #b6e6bd;
+  }
+
+  &__grey {
+    color: #c9d1d3;
+  }
+}

@@ -1,0 +1,44 @@
+.add {
+  &__input {
+    padding: 18px 0px;
+    input {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #efefef;
+      box-sizing: border-box; // остаемся внутри блока, из-за pedding   width 100% выходит за грани
+      border-radius: 4px;
+      padding: 8px 12px;
+      &:focus {
+        // дебил & надо было поставить
+        border-color: #aaa8a8;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    margin-top: 15px;
+    button {
+      border-radius: 4px;
+      border: 0px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    &__add {
+      background: #6bca73;
+      color: #fff;
+      margin-right: 10px;
+    }
+    &__close {
+      background: #d4d3d3;
+      color: rgb(10, 10, 10);
+    }
+  }
+}
+
+.default {
+  &__add {
+    margin-left: 11px;
+    cursor: pointer;
+  }
+  margin-top: 10px;
+}
