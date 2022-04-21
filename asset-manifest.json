@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/todo.github.io/static/css/main.37ae329f.chunk.css",
+    "main.js": "/todo.github.io/static/js/main.e3861b92.chunk.js",
+    "main.js.map": "/todo.github.io/static/js/main.e3861b92.chunk.js.map",
+    "runtime-main.js": "/todo.github.io/static/js/runtime-main.a71aa4b9.js",
+    "runtime-main.js.map": "/todo.github.io/static/js/runtime-main.a71aa4b9.js.map",
+    "static/js/2.4b529eea.chunk.js": "/todo.github.io/static/js/2.4b529eea.chunk.js",
+    "static/js/2.4b529eea.chunk.js.map": "/todo.github.io/static/js/2.4b529eea.chunk.js.map",
+    "index.html": "/todo.github.io/index.html",
+    "static/css/main.37ae329f.chunk.css.map": "/todo.github.io/static/css/main.37ae329f.chunk.css.map",
+    "static/js/2.4b529eea.chunk.js.LICENSE.txt": "/todo.github.io/static/js/2.4b529eea.chunk.js.LICENSE.txt",
+    "static/media/add.7e537346.svg": "/todo.github.io/static/media/add.7e537346.svg",
+    "static/media/check.4b7b1262.svg": "/todo.github.io/static/media/check.4b7b1262.svg",
+    "static/media/close.0563020f.svg": "/todo.github.io/static/media/close.0563020f.svg",
+    "static/media/edit.5be2348c.svg": "/todo.github.io/static/media/edit.5be2348c.svg",
+    "static/media/list.a8982468.svg": "/todo.github.io/static/media/list.a8982468.svg",
+    "static/media/remove.c130db59.svg": "/todo.github.io/static/media/remove.c130db59.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a71aa4b9.js",
+    "static/js/2.4b529eea.chunk.js",
+    "static/css/main.37ae329f.chunk.css",
+    "static/js/main.e3861b92.chunk.js"
+  ]
+}
