@@ -1,13 +1,13 @@
 {
-  "name": "chelenge",
+  "name": "todo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kapysta1488.github.io/todo.github.io/",
   "dependencies": {
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "effector": "^21.8.3",
     "effector-react": "^21.2.1",
-    "json-server": "^0.16.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "fake-json": "json-server ./src/assets/db.json --watch --port 3001"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "stylelint": "^14.7.1",
     "stylelint-config-standard": "^25.0.0"
   }
