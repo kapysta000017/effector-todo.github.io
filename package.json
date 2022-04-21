@@ -2,7 +2,7 @@
   "name": "todo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kapysta1488.github.io/todo.github.io/",
+  "homepage": "https://kapysta1488.github.io/effector-todo.github.io/",
   "dependencies": {
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
