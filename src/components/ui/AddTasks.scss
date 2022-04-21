@@ -5,11 +5,10 @@
       width: 100%;
       background: #ffffff;
       border: 1px solid #efefef;
-      box-sizing: border-box; // остаемся внутри блока, из-за pedding   width 100% выходит за грани
+      box-sizing: border-box;
       border-radius: 4px;
       padding: 8px 12px;
       &:focus {
-        // дебил & надо было поставить
         border-color: #aaa8a8;
       }
     }

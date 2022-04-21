@@ -8,11 +8,11 @@
     "effector": "^21.8.3",
     "effector-react": "^21.2.1",
     "json-server": "^0.16.3",
-    "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1"
+    "react-scripts": "4.0.1",
+    "sass": "^1.50.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "stylelint": "^14.7.1",
+    "stylelint-config-standard": "^25.0.0"
   }
 }

@@ -1,5 +1,5 @@
 .sidebar__add {
-  position: relative; // для того чтобы теги внутри с absolute(img) не выходили
+  position: relative;
   img {
     position: absolute;
     top: -12px;
@@ -8,15 +8,15 @@
   }
   padding: 10px;
   margin-top: 15px;
-  width: 235px; // блок div занимает всю ширину, а так не занимает
+  width: 235px;
   height: 150px;
   background: #ffffff;
-  box-shadow: 0px 6px 10px rgba($color: #000000, $alpha: 0.05); // косим вправо
+  box-shadow: 0px 6px 10px rgba($color: #000000, $alpha: 0.05); // косится вправо
   border-radius: 10px;
   &__color {
-    display: flex; // работает на тегах внутри
+    display: flex;
     justify-content: space-between;
-    padding: 7px; // отступ внутри себя(padding)   // отступ от соседенего тега на одном уровне(margin)
+    padding: 7px;
     i {
       // border: 1px solid transparent; // прозрачный бордер
       cursor: pointer;
@@ -65,11 +65,10 @@
     width: 100%;
     background: #ffffff;
     border: 1px solid #efefef;
-    box-sizing: border-box; // остаемся внутри блока, из-за pedding   width 100% выходит за грани
+    box-sizing: border-box;
     border-radius: 4px;
     padding: 8px 12px;
     &:focus {
-      // дебил & надо было поставить
       border-color: #aaa8a8;
     }
   }

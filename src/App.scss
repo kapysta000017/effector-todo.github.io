@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap'); // подключение цветов из инета
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"); // подключение цветов из инета
+@import-normalize;
 
 * {
   margin: 0;
   padding: 0;
   list-style: none; // точки у li
   outline: none; // button без границ
-  font-family: 'Roboto', sans-serif; // утанавливается шрифт для всех буков
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
 
 .todo {
-  display: flex; // блоки идут в строку
+  display: flex; // блоки в ряд
   position: absolute;
   left: 50%;
   top: 50%;
