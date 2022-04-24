@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/effector-todo.github.io/static/css/main.37ae329f.chunk.css",
+    "main.css": "/effector-todo.github.io/static/css/main.3136ddd2.chunk.css",
     "main.js": "/effector-todo.github.io/static/js/main.e3861b92.chunk.js",
     "main.js.map": "/effector-todo.github.io/static/js/main.e3861b92.chunk.js.map",
     "runtime-main.js": "/effector-todo.github.io/static/js/runtime-main.31277316.js",
@@ -8,7 +8,7 @@
     "static/js/2.4b529eea.chunk.js": "/effector-todo.github.io/static/js/2.4b529eea.chunk.js",
     "static/js/2.4b529eea.chunk.js.map": "/effector-todo.github.io/static/js/2.4b529eea.chunk.js.map",
     "index.html": "/effector-todo.github.io/index.html",
-    "static/css/main.37ae329f.chunk.css.map": "/effector-todo.github.io/static/css/main.37ae329f.chunk.css.map",
+    "static/css/main.3136ddd2.chunk.css.map": "/effector-todo.github.io/static/css/main.3136ddd2.chunk.css.map",
     "static/js/2.4b529eea.chunk.js.LICENSE.txt": "/effector-todo.github.io/static/js/2.4b529eea.chunk.js.LICENSE.txt",
     "static/media/add.7e537346.svg": "/effector-todo.github.io/static/media/add.7e537346.svg",
     "static/media/check.4b7b1262.svg": "/effector-todo.github.io/static/media/check.4b7b1262.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.31277316.js",
     "static/js/2.4b529eea.chunk.js",
-    "static/css/main.37ae329f.chunk.css",
+    "static/css/main.3136ddd2.chunk.css",
     "static/js/main.e3861b92.chunk.js"
   ]
 }
