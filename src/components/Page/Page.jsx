@@ -1,12 +1,12 @@
-import './Lists.scss';
-import './Tasks.scss';
-import listSvg from '../../assets/img/list.svg';
-import addSvg from '../../assets/img/add.svg';
-import removeSvg from '../../assets/img/remove.svg';
-import editSvg from '../../assets/img/edit.svg';
-import checkSvg from '../../assets/img/check.svg';
-import React, { useState } from 'react';
-import { useStore, useGate } from 'effector-react';
+import "./Lists.scss"
+import "./Tasks.scss"
+import listSvg from "../../assets/img/list.svg"
+import addSvg from "../../assets/img/add.svg"
+import removeSvg from "../../assets/img/remove.svg"
+import editSvg from "../../assets/img/edit.svg"
+import checkSvg from "../../assets/img/check.svg"
+import React, { useState } from "react"
+import { useStore, useGate } from "effector-react"
 import {
   GateLists,
   $lists,
@@ -20,7 +20,7 @@ import {
   onSelectColor,
   fetchRemoveList,
   fetchRenameTitle,
-} from './modelLists';
+} from "./modelLists"
 import {
   fetchRenameCheck,
   GateItems,
@@ -32,12 +32,12 @@ import {
   onAddItem,
   fetchAddItem,
   fetchRemoveItem,
-} from './modelTasks';
-import { useHistory } from 'react-router-dom';
-import InputTodo from '../ui/InputTodo';
-import AddItem from '../ui/AddItem';
-import { Route, BrowserRouter } from 'react-router-dom';
-import classNames from 'classnames';
+} from "./modelTasks"
+import { useHistory } from "react-router-dom"
+import InputTodo from "../ui/InputTodo"
+import AddItem from "../ui/AddItem"
+import { Route, BrowserRouter } from "react-router-dom"
+import classNames from "classnames"
 
 export function Page() {
   return (
@@ -45,31 +45,31 @@ export function Page() {
       <Lists />
       <Route path="/tasks/:id" component={Tasks} />
     </BrowserRouter>
-  );
+  )
 }
 
 function Lists() {
-  const [active, setActive] = useState(false);
-  useGate(GateLists);
-  const isLoading = useStore(fetchLists.pending);
-  const isLoadingAdd = useStore(fetchAddTodo.pending);
-  const lists = useStore($lists);
-  const error = useStore($error);
-  let history = useHistory();
-  useGate(GateLists);
+  const [active, setActive] = useState(false)
+  useGate(GateLists)
+  const isLoading = useStore(fetchLists.pending)
+  const isLoadingAdd = useStore(fetchAddTodo.pending)
+  const lists = useStore($lists)
+  const error = useStore($error)
+  let history = useHistory()
+  useGate(GateLists)
   const onClickRoute = (tagName, id) => {
-    if (tagName !== 'img') {
-      history.push(`/tasks/${id}`);
+    if (tagName !== "img") {
+      history.push(`/tasks/${id}`)
     }
-  };
+  }
   const onRemoveList = (id) => {
-    if (window.confirm('Точно удалить?')) {
-      fetchRemoveList(id);
-      history.push('/');
+    if (window.confirm("Точно удалить?")) {
+      fetchRemoveList(id)
+      history.push("/")
     }
-  };
+  }
   if (error) {
-    return <div>{`Статус ошибки ${error}`}</div>;
+    return <div>{`Статус ошибки ${error}`}</div>
   }
   return (
     <div className="sidebar">
@@ -81,14 +81,18 @@ function Lists() {
         <h3>Loading...</h3>
       ) : (
         lists.map((list) => (
-          <li key={list.id} onClick={(e) => onClickRoute(e.target.localName, list.id)}>
+          <li
+            key={list.id}
+            onClick={(e) => onClickRoute(e.target.localName, list.id)}
+          >
             <i className={`title__${list.color}`}></i>
             <span className="sidebar__text">{list.title}</span>
             <img
               className="sidebar__remove"
               src={removeSvg}
               alt="remove"
-              onClick={() => onRemoveList(list.id)}></img>
+              onClick={() => onRemoveList(list.id)}
+            ></img>
           </li>
         ))
       )}
@@ -103,28 +107,31 @@ function Lists() {
           onSelectColor={onSelectColor}
         />
       ) : (
-        <div className="sidebar__addTodo" onClick={() => setActive((state) => !state)}>
+        <div
+          className="sidebar__addTodo"
+          onClick={() => setActive((state) => !state)}
+        >
           <img src={addSvg} alt="add"></img>
           <span>Добавить папку</span>
         </div>
       )}
     </div>
-  );
+  )
 }
 
 function Tasks({ match }) {
-  let history = useHistory();
-  useGate(GateItems, match.params.id);
-  const lists = useStore($lists);
-  const items = useStore($items);
-  const isLoading = useStore(fetchItems.pending);
-  const error = useStore($errorItems);
+  let history = useHistory()
+  useGate(GateItems, match.params.id)
+  const lists = useStore($lists)
+  const items = useStore($items)
+  const isLoading = useStore(fetchItems.pending)
+  const error = useStore($errorItems)
   const onRenameTitle = (list) => {
-    const newTitle = window.prompt('Переименовать?', [list.title]);
-    fetchRenameTitle({ id: list.id, color: list.color, title: newTitle });
-  };
+    const newTitle = window.prompt("Переименовать?", [list.title])
+    fetchRenameTitle({ id: list.id, color: list.color, title: newTitle })
+  }
   if (error) {
-    return <div>{`Статус ошибки ${error}`}</div>;
+    return <div>{`Статус ошибки ${error}`}</div>
   }
   return (
     <div className="tasks">
@@ -132,14 +139,20 @@ function Tasks({ match }) {
         list.id === match.params.id ? (
           <div key={list.id}>
             <div className="tasks__title">
-              <h2 className={classNames('tasks__title__text', `main__title__${list.color}`)}>
+              <h2
+                className={classNames(
+                  "tasks__title__text",
+                  `main__title__${list.color}`
+                )}
+              >
                 {list.title}
               </h2>
               <img
                 onClick={() => onRenameTitle(list)}
                 className="tasks__title__edit"
                 src={editSvg}
-                alt="edit"></img>
+                alt="edit"
+              ></img>
             </div>
             {isLoading ? (
               <h3>loading...</h3>
@@ -153,7 +166,8 @@ function Tasks({ match }) {
                     checked={item.completed}
                     onChange={() =>
                       fetchRenameCheck({ ...item, completed: !item.completed })
-                    }></input>
+                    }
+                  ></input>
                   <label htmlFor={`check${item.id}`}>
                     <img src={checkSvg} alt="check"></img>
                   </label>
@@ -161,14 +175,17 @@ function Tasks({ match }) {
                   <img
                     src={removeSvg}
                     alt="delete"
-                    onClick={() => fetchRemoveItem({ id: item.id, listId: item.listId })}></img>
+                    onClick={() =>
+                      fetchRemoveItem({ id: item.id, listId: item.listId })
+                    }
+                  ></img>
                 </div>
               ))
             )}
           </div>
-        ) : null,
+        ) : null
       )}
-      {history.location.pathname === '/' ? null : (
+      {history.location.pathname === "/" ? null : (
         <AddItem
           fetchAddItem={fetchAddItem}
           changeInputItem={changeInputItem}
@@ -178,12 +195,5 @@ function Tasks({ match }) {
         />
       )}
     </div>
-  );
+  )
 }
-
-// </Tasks>
-// const Tasks = () => {
-// post возращается id(key) - обновление стора после запроса
-// delete ничего не возращает - обновление стора до запроса
-// patch - обновление стора до запроса
-// }

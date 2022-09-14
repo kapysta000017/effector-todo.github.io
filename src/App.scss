@@ -3,14 +3,14 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none; // точки у li
-  outline: none; // button без границ
+  list-style: none;
+  outline: none;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
 
 .todo {
-  display: flex; // блоки в ряд
+  display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
